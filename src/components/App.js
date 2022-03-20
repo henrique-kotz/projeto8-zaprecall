@@ -3,16 +3,19 @@ import Header from './Header';
 import Deck from './Deck/Deck';
 import Footer from  './Footer/Footer';
 
+import { useState } from 'react';
+
 import '../css/reset.css';
 import '../css/style.css';
 
 export default function App() {
-    return (
-    <>
-        <Recall />
-        <Header />
-        <Deck />
-        <Footer />
-    </>
+    const [visible, setVisible] = useState(true);
+
+    return visible ? <Recall setVisible={setVisible} /> : (
+        <>
+            <Header />
+            <Deck />
+            <Footer />
+        </>
     );
 }

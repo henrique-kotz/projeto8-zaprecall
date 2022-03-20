@@ -70,7 +70,7 @@ header {
 header img {
     width: 52px;
     height: 60px;
-    margin-right: 20px;
+    margin-right: 25px;
 }
 header h2 {
     font-family: 'Righteous', cursive;
@@ -85,31 +85,69 @@ header h2 {
     flex-direction: column;
     align-items: center;
     margin-top: 140px;
+    margin-bottom: 70px;
 
     font-family: 'Recursive', sans-serif;
 }
 .flashcard {
     width: 300px;
-    height: 65px;
     margin-bottom: 25px;
     padding: 0 15px;
 
-    background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
-
+}
+.back {
+    height: 65px;
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.flashcard p {
+.back p {
     font-size: 16px;
     font-weight: 700;
     color: #333;
 }
-.flashcard img {
+.back img {
     width: 20px;
     height: 23px;
+}
+.front {
+    min-height: 131px;
+    background-color: #ffffd4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.front p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+    margin: 18px 0;
+}
+.front img {
+    width: 30px;
+    height: 20px;
+    align-self: flex-end;
+    margin-bottom: 6px;
+}
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+.button-container button {
+    font-family: 'Recursive', sans-serif;
+    width: 85px;
+    height: 38px;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
 }
 
 footer {

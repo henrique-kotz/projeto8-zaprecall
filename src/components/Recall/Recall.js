@@ -1,17 +1,12 @@
-import { useState } from 'react';
 import Logo from './Logo';
 
-export default function Recall() {
-    const [visible, setVisible] = useState(true);
-
-    return visible ? (
+export default function Recall(props) {
+    return (
         <div className='recall'>
             <Logo />
-            <button onClick={() => setVisible(false)}>
+            <button onClick={() => props.setVisible(false)}>
                 Iniciar Recall!
             </button>
         </div>
-    ) : (
-      ''
     );
 }
