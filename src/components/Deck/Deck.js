@@ -1,7 +1,10 @@
 import Flashcard from "./Flashcard";
+import Footer from './Footer';
+
+import { useState } from 'react';
 
 export default function Deck() {
-    const reactDeck = [
+    const deck = [
         {
             question: 'O que é JSX?',
             answer: 'Uma extensão da linguagem do JavaScript'
@@ -36,9 +39,20 @@ export default function Deck() {
         }
     ];
 
+    const [answerSequence, setAnswerSequence] = useState([]);
+    deck.sort(comparador);
+
+    function comparador() { 
+        return Math.random() - 0.5; 
+    }
+
     return (
+    <>
         <ul className="deck">
-            {reactDeck.map((r, i) => <Flashcard key={i} number={i+1} content={r} />)}
+            {deck.map((r, i) => <Flashcard key={i} number={i+1} content={r} answerSequence={answerSequence} setAnswerSequence={setAnswerSequence} />)}
         </ul>
+        <Footer total={deck.length} answerSequence={answerSequence} />
+    </>
+
     )
 }

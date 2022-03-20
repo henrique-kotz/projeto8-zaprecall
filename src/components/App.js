@@ -1,7 +1,6 @@
 import Recall from './Recall/Recall';
 import Header from './Header';
 import Deck from './Deck/Deck';
-import Footer from  './Footer/Footer';
 
 import { useState } from 'react';
 
@@ -15,7 +14,6 @@ export default function App() {
         <>
             <Header />
             <Deck />
-            <Footer />
         </>
     );
 }

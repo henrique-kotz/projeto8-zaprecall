@@ -109,10 +109,6 @@ header h2 {
     font-weight: 700;
     color: #333;
 }
-.back img {
-    width: 20px;
-    height: 23px;
-}
 .front {
     min-height: 131px;
     background-color: #ffffd4;
@@ -151,8 +147,9 @@ header h2 {
 }
 
 footer {
+    font-family: 'Recursive', sans-serif;
     width: 100%;
-    height: 70px;
+    min-height: 70px;
     background-color: #fff;
     position: fixed;
     bottom: 0;
@@ -160,13 +157,37 @@ footer {
     z-index: 2;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.05);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-footer p {
-    font-family: 'Recursive', sans-serif;
+.end-message {
+    display: flex;
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.end-message img {
+    margin-right: 12px;
+}
+.end-description {
+    color: #333;
+    font-size: 18px;
+    margin: 14px 0;
+    width: 220px;
+    text-align: center;
+    line-height: 21px;
+}
+.answer-count {
     font-size: 18px;
     font-weight: 400;
     color: #333;
     text-align: center;
+    margin-bottom: 10px;
+}
+.icon-container {
+    margin-bottom: 10px;
+}
+.icon-container img {
+    margin-right: 5px;
 }
